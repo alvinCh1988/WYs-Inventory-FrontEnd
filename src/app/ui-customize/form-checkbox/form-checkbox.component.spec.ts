@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TableTbody001Component } from './table-tbody001.component';
+import { FormCheckboxComponent } from './form-checkbox.component';
 
-describe('TableTbody001Component', () => {
-  let component: TableTbody001Component;
-  let fixture: ComponentFixture<TableTbody001Component>;
+describe('FormCheckboxComponent', () => {
+  let component: FormCheckboxComponent;
+  let fixture: ComponentFixture<FormCheckboxComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TableTbody001Component ]
+      declarations: [ FormCheckboxComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TableTbody001Component);
+    fixture = TestBed.createComponent(FormCheckboxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
