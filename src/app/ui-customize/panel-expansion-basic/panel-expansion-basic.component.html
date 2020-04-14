@@ -1,0 +1,20 @@
+<mat-accordion>
+    <ng-container *ngFor="let item of [1,2,3]">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <!-- <mat-panel-title>
+                    <strong>化妝水</strong>
+                </mat-panel-title> -->
+                <mat-panel-description>
+                    單位: 瓶
+                </mat-panel-description>
+                <mat-panel-description>
+                    庫存: 5
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <table-basic></table-basic>
+        </mat-expansion-panel>
+    </ng-container>
+
+</mat-accordion>
