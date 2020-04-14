@@ -1,0 +1,15 @@
+@media print {
+  .print-no-show {
+    display: none;
+  }
+
+  .print-no-break {
+    page-break-inside: avoid;
+  }
+}
+
+@page {
+  margin: 1cm; //邊距1公分
+  // orphans: 4; //頁面最後一段段落行數，預設值為2
+  // widows: 2; //頁面第一段段落行數，預設值為2
+}

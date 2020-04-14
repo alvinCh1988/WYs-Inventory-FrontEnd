@@ -1,0 +1,46 @@
+[nx-ui-btn] {
+  font-family: $font-family;
+}
+
+.btn_block {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  [nx-ui-btn] {
+    + [nx-ui-btn] {
+      margin-left: 50px;
+    }
+  }
+
+  // end: ui-btn
+  @media (max-width: $screen-sm-than-pad) {
+    [nx-ui-btn] {
+      + [nx-ui-btn] {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  // end: sm-than-pad
+}
+//disable狀態
+button[nx-ui-btn][disabled] {
+  .nx-color--main.btn--full {
+    background-color: $color-grey-07;
+    border-color: $color-grey-10;
+  }
+  .nx-color--main.btn--border {
+    border-color: $color-grey-10;
+    color: $color-grey-07;
+  }
+}
+
+.btn_layout_margin {
+  margin-top: 50px;
+
+  @media (max-width: $screen-sm-than-pad) {
+    margin-top: 30px;
+  }
+}

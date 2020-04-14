@@ -14,6 +14,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatTreeModule } from '@angular/material/tree';
+import { MatIconModule } from '@angular/material/icon';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
@@ -23,6 +25,8 @@ import { FormSliderComponent } from './form-slider/form-slider.component';
 import { TableBasicComponent } from './table-basic/table-basic.component';
 import { TableExpandableComponent } from './table-expandable/table-expandable.component';
 import { PanelExpansionBasicComponent } from './panel-expansion-basic/panel-expansion-basic.component';
+import { TreeNodesComponent } from './tree-nodes/tree-nodes.component';
+import { TreeDynamicComponent } from './tree-dynamic/tree-dynamic.component';
 
 @NgModule({
   declarations: [
@@ -35,10 +39,12 @@ import { PanelExpansionBasicComponent } from './panel-expansion-basic/panel-expa
     FormSelectComponent,
     FormSliderComponent,
     PanelExpansionBasicComponent,
+    TreeNodesComponent,
+    TreeDynamicComponent,
   ],
   // 模組匯入區
   imports: [
-    //form
+    // form
     MatAutocompleteModule,
     MatDatepickerModule,
     MatInputModule,
@@ -47,16 +53,19 @@ import { PanelExpansionBasicComponent } from './panel-expansion-basic/panel-expa
     MatRadioModule,
     MatSelectModule,
     MatSliderModule,
-    //Dialog
+    // Dialog
     MatDialogModule,
-    //table
+    // table
     MatTableModule,
+    // else
     MatExpansionModule,
-    //else
+    MatTreeModule,
+    MatIconModule,
+    // else
     BrowserAnimationsModule,
   ],
   exports: [
-    //Component
+    // Component
     TableBasicComponent,
     TableExpandableComponent,
     FormInputComponent,
@@ -66,8 +75,10 @@ import { PanelExpansionBasicComponent } from './panel-expansion-basic/panel-expa
     FormSelectComponent,
     FormSliderComponent,
     PanelExpansionBasicComponent,
+    TreeNodesComponent,
+    TreeDynamicComponent,
 
-    //Module
+    // Module
     MatAutocompleteModule,
     MatDatepickerModule,
     MatInputModule,

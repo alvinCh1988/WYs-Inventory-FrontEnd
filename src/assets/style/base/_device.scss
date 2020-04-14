@@ -1,0 +1,48 @@
+@import 'style-import';
+// show and hide on different device
+
+// * show-pc:1023~(含以下)看不見
+// * show-pad:~1024 767~ 看不見
+// * show-pc-and-pad :767~ 看不見
+// * show-pc-and-mobile:1023~768 看不見
+// * show-mobile: ~768 看不見
+@media (min-width: $screen-nb) {
+    .show-pad-and-mobile {
+        display: none !important;
+    }
+}
+
+@media (min-width: $screen-pad) {
+    .show-mobile {
+        display: none !important;
+    }
+}
+// 1023含以以下看不見
+@media(max-width: $screen-sm-than-nb) {
+    .show-pc {
+        display: none !important;
+    }
+}
+
+@media(max-width: $screen-sm-than-nb )and( min-width: $screen-pad ) {
+    .show-pc-and-mobile {
+        display: none !important;
+    }
+}
+
+
+@media (min-width: $screen-nb) {
+    .show-pad {
+        display: none !important;
+    }
+}
+
+@media (max-width: $screen-sm-than-pad) {
+    .show-pc-and-pad {
+        display: none !important;
+    }
+    .show-pad {
+        display: none !important;
+    }
+
+}

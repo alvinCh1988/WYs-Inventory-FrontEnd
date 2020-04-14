@@ -1,0 +1,446 @@
+body {
+  width: 100vw;
+  color: $color-font;
+}
+
+skh-page-content {
+  width: 100vw;
+}
+
+.layout-hidden {
+  display: none !important;
+}
+
+.skh {
+
+  // 麵包屑文字大小
+  nx-layout-breadcrumb {
+    .nx-ui-breadcrumb {
+
+      .breadcrumb_link,
+      .breadcrumb_text {
+        font-size: 15px;
+        color: $color-font;
+
+        &:hover {
+          color: $color-main;
+        }
+      }
+
+      .breadcrumb_link {
+        &:after {
+          border-color: #bbb; //同現行官網
+        }
+      }
+
+      .breadcrumb_link.active {
+        .breadcrumb_text {
+          color: $color-font;
+
+          &:hover {
+            color: $color-main;
+          }
+        }
+
+        // end: .breadcrumb_text
+      }
+
+      // end: active
+    }
+
+    @media (max-width: $screen-sm-than-nb) {
+      display: none;
+    }
+  }
+
+  // 版型背景色
+  .layout-card-bg {
+    background-color: $content-block-bg;
+  }
+
+  .layout-card-bg02 {
+    background-color: $color-grey-06;
+  }
+ //end : 版型背景色
+ .layout-font-bold {
+  font-weight: bold;
+}
+ //通用間距
+  .layout-content-padding01 {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  // 通用上間距
+  .layout-content-padding-top {
+    padding-top: 50px;
+
+    @media (max-width: $screen-pad) {
+      padding-top: 15px;
+    }
+  }
+  // 灰區裡面的上間距
+  .inpage_content>.layout-content-padding-top {
+    padding-top: 40px;
+  }
+
+  .layout-content-padding-top02 {
+    padding-top: 40px;
+
+    @media (max-width: $screen-pad) {
+      padding-top: 30px;
+    }
+  }
+
+  .layout-content-padding-top03 {
+    padding-top: 30px;
+  }
+
+  .layout-content-padding-top04 {
+    padding-top: 50px;
+
+    @media (max-width: $screen-pad) {
+      padding-top: 30px;
+    }
+  }
+
+  .layout-content-padding-top05 {
+    padding-top: 50px;
+  }
+
+  .layout-content-padding-bottom {
+    padding-bottom: 50px;
+
+    @media (max-width: $screen-pad) {
+      padding-bottom: 30px;
+    }
+  }
+
+  // // 灰區裡面的下間距
+  // .inpage_content {
+  //   .layout-content-padding-bottom {
+  //     &:last-of-type {
+  //       padding-bottom: 50px;
+  //     }
+  //   }
+  // }
+
+  .layout-content-padding-bottom-sm {
+    padding-bottom: 30px;
+
+    // @media (max-width: $screen-pad) {
+    //   padding-bottom: 30px;
+    // }
+  }
+
+  .layout-content-padding-bottom02 {
+    padding-bottom: 50px;
+  }
+ //end : 通用間距
+
+ //通用表單標題
+  .layout-form-main-title {
+    padding-left: 45px;
+
+    @media (max-width: $screen-nb) {
+      padding-left: 0px;
+    }
+
+    .main-blue {
+      font-size: $font-size-h7;
+      color: $color-blue-01;
+    }
+  }
+ //end:通用表單標題
+
+  // btn scss
+  .btn-layout-margin-left {
+    margin-left: 50px;
+
+    @media (max-width: $screen-pad) {
+      margin-left: 20px;
+    }
+  }
+
+  //end: btn scss
+  //link scss
+  .layout-link001 {
+    display: inline-block;
+    font-size: $font-size-h10;
+    color: $color-blue-03;
+    text-decoration: none;
+
+    &--line {
+      text-decoration: underline;
+    }
+  }
+
+  //end: link scss
+
+  // note scss
+  $text-note-img-size: 13px;
+
+  .layout-note001 {
+    &_img {
+      display: inline-block;
+      max-width: $text-note-img-size;
+
+      img {
+        width: $text-note-img-size;
+        height: $text-note-img-size;
+      }
+    }
+
+    &_text {
+      display: inline-block;
+      font-size: $font-size-h9;
+      margin-left: 10px;
+      color: $color-grey-03;
+    }
+
+    &_link-text {
+      display: inline-block;
+      font-size: $font-size-h9;
+      color: $color-blue-03;
+    }
+  }
+
+  .layout-note002 {
+    @media (max-width: $screen-pad) {
+      margin-top: 10px;
+    }
+
+    &_img {
+      display: inline-block;
+      width: $text-note-img-size;
+      height: $text-note-img-size;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &_text {
+      font-weight: bold;
+      display: inline-block;
+      font-size: $font-size-h10;
+      margin-left: 10px;
+    }
+  }
+
+  .layout-note003 {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    margin: 5px 0;
+
+    @media (max-width: $screen-sm-than-nb) {
+      margin-bottom: 0px;
+      margin-top: 20px;
+    }
+
+    // +img{
+    //   height: 80px;
+    // }
+  }
+
+  //end: note scss
+
+  [nx-layout-content] {
+    box-sizing: border-box;
+
+    @media (max-width: $screen-sm-than-desktop) {
+      padding-left: $space-nb;
+      padding-right: $space-nb;
+    }
+
+    @media (max-width: $screen-sm-than-nb) {
+      padding-left: $space-pad;
+      padding-right: $space-pad;
+    }
+
+    @media (max-width: $screen-sm-than-pad) {
+      padding-left: $space-mobile;
+      padding-right: $space-mobile;
+
+      &.layout_space-mobile--no {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  $layout-inpage-padding-lg: 32px;
+  $layout-inpage-padding-md: 10px;
+  $layout-inpage-padding-sm: 5px;
+
+  $nx-layout-item-padding-lg: 50px;
+  $nx-layout-item-padding-sm: 10px;
+
+  // 內頁滿版layout
+  @import "layout-full";
+
+  //內頁常見標題
+  .layout-content-text001 {
+    font-size: $font-size-h5;
+    font-weight: bold;
+    color: $color-black-01;
+
+    @media (max-width: $screen-sm-than-nb) {
+      font-size: $font-size-h7;
+    }
+  }
+
+  .layout-content-text002 {
+    &_title {
+      font-size: $font-size-h7;
+      font-weight: bold;
+      color: $color-black-01;
+
+      &--margin,
+      &--margin-no-top {
+        margin-left: 45px;
+        margin-top: 30px;
+
+        @media (max-width: $screen-sm-than-desktop) {
+          margin-left: 0px;
+        }
+      }
+
+      &--margin-no-top {
+        margin-top: 0px;
+      }
+    }
+
+    &_date {
+      font-size: $font-size-h9;
+      color: $color-black;
+      padding-top: 30px;
+    }
+
+    &_content {
+      padding: 20px 0 30px;
+      font-size: $font-size-h9;
+      color: $color-black-01;
+      line-height: 1.64;
+
+      &_link {
+        display: inline-block;
+
+        img {
+          max-width: 24px;
+          max-height: 24px;
+          width: 100%;
+          display: inline-block;
+          vertical-align: middle;
+          margin: 0 10px 0 5px;
+        }
+
+        a {
+          font-size: $font-size-h9;
+          color: $color-blue-03;
+          display: inline-block;
+          vertical-align: middle;
+
+          @media (max-width: $screen-sm-than-pad) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  //drag search
+  .layout-content-text003 {
+    color: $color-black-01;
+    font-size: $font-size-h8;
+  }
+
+  .layout-content-text004 {
+    margin-left: 30px;
+
+    @media (max-width: $screen-sm-than-desktop) {
+      margin-left: 0px;
+    }
+  }
+
+  //end : 內頁標題
+
+  // 「預約成功」通用樣式
+  $icon-sucess-size: 50px;
+  $icon-sucess-size-mb: 40px;
+
+  .layout_sucess-block {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    &_img {
+      height: $icon-sucess-size;
+      width: $icon-sucess-size;
+
+      @media (max-width: $screen-sm-than-pad) {
+        height: $icon-sucess-size-mb;
+        width: $icon-sucess-size-mb;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &_text {
+      font-weight: bold;
+      color: $color-black-01;
+      margin-left: 20px;
+      font-size: $font-size-h5;
+
+      @media (max-width: $screen-sm-than-pad) {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+// end: skh
+
+// style_scrollbar
+.style_scrollbar_001 {
+  width: 6px;
+  background-color: $color-grey-10;
+  height: 6px;
+}
+
+.style_scrollbar_thumb_001 {
+  background-color: $color-grey-02;
+}
+
+// body::-webkit-scrollbar {
+//   @extend .style_scrollbar_001 !optional;
+// }
+
+// body::-webkit-scrollbar-thumb {
+//   @extend .style_scrollbar_thumb_001 !optional;
+// }
+
+body *::-webkit-scrollbar {
+  @extend .style_scrollbar_001 !optional;
+}
+
+body *::-webkit-scrollbar-thumb {
+  @extend .style_scrollbar_thumb_001 !optional;
+}
+
+body {
+  scrollbar-arrow-color: $color-grey-10;
+  scrollbar-face-color: $color-grey-02;
+  scrollbar-3dlight-color: transparent;
+  scrollbar-highlight-color: $color-grey-10;
+  scrollbar-shadow-color: transparent;
+  scrollbar-darkshadow-color: transparent;
+  scrollbar-track-color: $color-grey-10;
+  scrollbar-base-color: $color-grey-02;
+}

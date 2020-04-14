@@ -1,0 +1,25 @@
+@import "layout/layout";
+@import "component/form";
+@import "component/btn";
+
+.skh-html.cdk-global-scrollblock{
+  overflow-y: visible;
+}
+body {
+  font-family: $font-family;
+  -webkit-overflow-scrolling: touch;
+  &.style--fix {
+    position: fixed;
+    overflow: hidden;
+  }
+  img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-drag: none;
+    // user-drag: none;
+    -webkit-touch-callout: none;
+  }
+}

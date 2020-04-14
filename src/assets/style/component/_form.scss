@@ -1,0 +1,133 @@
+// select arrow
+@mixin selectArrow($arrow-color) {
+  &:after {
+    content: " ";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0;
+    border-color: $arrow-color transparent transparent;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+}
+
+// input , textarea
+[nx-input],
+[nx-textarea] {
+  @include skhInputType();
+
+  &[no-space] {
+    padding-left: 0;
+  }
+}
+
+[nx-textarea] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: $form-height-textarea;
+}
+
+//form date
+.nx-ui-date {
+  position: relative;
+
+  [nx-date] {
+    @include skhInputType();
+    max-width: 100%;
+    width: 100%;
+    display: inline-block;
+    background-color: $color-bg-form;
+  }
+}
+
+// date with arror
+[date-type-001] {
+  .nx-ui-date {
+    @include selectArrow($color-main);
+  }
+
+  [nx-date] {}
+}
+
+//tmp
+[nx-form] {
+
+  nx-checkbox[nx-checkbox] .nx-form-choose,
+  nx-radio[nx-radio] .nx-form-choose {
+    margin-right: 0;
+    color: $color-font;
+
+    label {
+      cursor: pointer;
+    }
+  }
+}
+
+[nx-form] {
+  [nx-input] {
+    background-color: $color-white;
+    color: $color-font;
+    // border-radius: 23px;
+  }
+}
+
+[nx-form] {
+
+  [nx-input],
+  [nx-select] .select_container--customize,
+  [nx-select] .select_selected,
+  [nx-select] select,
+  [nx-select],
+  [nx-textarea]{
+    background-color: $color-white;
+    color: $color-grey-04;
+    border-radius: 23px;
+
+    .select_option_container {
+      margin-top: 15px;
+      border-radius: 10px;
+      padding: 5px 0px 5px 10px;
+    }
+  }
+  [nx-textarea]{
+    overflow: auto;
+  }
+}
+
+// input--underline
+[nx-form] {
+  .input--underline {
+    [nx-input] {
+      @include input--underline();
+    }
+  }
+  .input--sm-height {
+    [nx-input] {
+     height: 25px;
+     line-height: 25px;
+    }
+  }
+}
+
+
+
+[nx-form] {
+
+  // checkbox
+  .check-style--circle {
+    .check_icon_container {
+      border-radius: 50%;
+    }
+  }
+
+  //標題間距小
+  [form-title-sm] {
+    margin-bottom: 15px;
+  }
+}

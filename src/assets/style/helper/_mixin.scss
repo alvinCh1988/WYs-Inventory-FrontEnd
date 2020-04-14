@@ -1,0 +1,183 @@
+@mixin skhInputType(){
+    background-color: $color-white;
+    padding-left: 20px;
+    border-radius: 23px;
+    box-sizing: border-box;
+    &.theme-dark{
+        background-color: $color-form-dark;
+    }
+}
+@mixin arrowTop($arrowWidth, $arrowSize, $arrowColor) {
+    border: solid $arrowColor;
+    border-width: 0 $arrowWidth $arrowWidth 0;
+    display: inline-block;
+    padding: $arrowSize;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+
+}
+
+@mixin arrowDown($arrowWidth, $arrowSize, $arrowColor) {
+    border: solid $arrowColor;
+    border-width: 0 $arrowWidth $arrowWidth 0;
+    display: inline-block;
+    padding: $arrowSize;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+
+}
+
+@mixin arrowRight($arrowWidth, $arrowSize, $arrowColor) {
+    border: solid $arrowColor;
+    border-width: 0 $arrowWidth $arrowWidth 0;
+    display: inline-block;
+    padding: $arrowSize;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+
+}
+
+@mixin arrowLeft($arrowWidth, $arrowSize, $arrowColor) {
+    border: solid $arrowColor;
+    border-width: 0 $arrowWidth $arrowWidth 0;
+    display: inline-block;
+    padding: $arrowSize;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+
+}
+
+// bootstrap collapse 收合後面　+ -
+//collapse 共用header的css
+@mixin collapse-style-img( 
+  //符號擺放位置(before/after)　要加上符號的class Name, 符號右邊, 符號寬高
+
+$sign-pos, $sign-pos-right, $size-width, $size-height, $class-name, $img-normal, $img-active) {
+
+
+   
+
+    [collapse-status="false"] {
+        .#{$class-name}{
+            &:#{$sign-pos} {
+                background-image: url(#{$img-normal});
+            }
+        }
+    }
+
+    [collapse-status="true"] {
+        .#{$class-name}{
+            &:#{$sign-pos} {
+                background-image: url($img-active);
+            }
+        }
+    }
+
+    .#{$class-name} {
+            position: relative;
+
+        &:#{$sign-pos} {
+            content: ' ';
+            display: inline-block; 
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-repeat: no-repeat;
+            background-size: $size-width $size-height;
+            width: $size-width;
+            height: $size-height;
+            right: $sign-pos-right;
+
+        }
+
+    }
+
+}
+
+
+@mixin collapse-style-img-top(
+  //符號擺放位置(before/after)　符號右邊, 符號寬高
+
+$sign-pos, $sign-pos-right, $sign-pos-top, $size-width, $size-height, $img-normal, $img-active) {
+
+    &[data-toggle="collapse"] {
+            position: relative;
+
+        &:#{$sign-pos} {
+            content: ' ';
+            display: inline-block;
+            position: absolute;
+            top: $sign-pos-top;
+            background-repeat: no-repeat;
+            background-size: $size-width $size-height;
+            width: $size-width;
+            height: $size-height;
+            right: $sign-pos-right;
+
+        }
+
+        &[aria-expanded="false"] {
+            &:#{$sign-pos} {
+                background-image: url($img-normal);
+            }
+
+        }
+
+        &[aria-expanded="true"] {
+            &:#{$sign-pos} {
+                background-image: url($img-active);
+            }
+
+        }
+
+
+    }
+
+
+}
+
+@mixin line-style-text($line-height,$line-color){
+	content: ' ';
+	display: inline-block;
+	width: 1px;
+	height: $line-height;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	position: absolute;
+	background-color: $line-color;
+}
+
+@mixin hover-display($target){
+
+    .icon-display--hover{
+        .normal{
+            display: inline-block;
+        }
+        .active{
+            display: none;
+        }
+
+
+    }
+    .#{$target}{
+        &:hover{
+            .icon-display--hover{
+                .normal{
+                    display: none;
+                }
+                .active{
+                    display: inline-block;
+                }
+            }
+        }
+
+    }
+}
+
+
+@mixin input--underline(){
+  background-color: transparent;
+  border-bottom: 1px solid $color-form-dark;
+  border-radius: 0;
+}

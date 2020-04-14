@@ -23,7 +23,6 @@ export class TableExpandableComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('======>', this.columnsName);
     this.columnsToDisplay = Object.keys(this.dataSource[0]);
   }
 
