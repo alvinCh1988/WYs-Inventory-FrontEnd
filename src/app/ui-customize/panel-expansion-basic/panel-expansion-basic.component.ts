@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'panel-expansion-basic',
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class PanelExpansionBasicComponent implements OnInit {
 
   panelOpenState = false;
+
+  @Input() dataSource;
 
   constructor() { }
 

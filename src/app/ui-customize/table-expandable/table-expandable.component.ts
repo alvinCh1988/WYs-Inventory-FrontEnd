@@ -1,3 +1,4 @@
+import { map } from 'rxjs/operators';
 import { Component, OnInit, Input } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
@@ -16,14 +17,19 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 export class TableExpandableComponent implements OnInit {
 
   @Input() dataSource;
-  @Input() columnsName;
 
   public columnsToDisplay = [];
+  public columnsName = ["項目", "庫存"];
+  public columnsData;
 
-  constructor() { }
-
+  constructor() { 
+  }
+  
   ngOnInit() {
-    this.columnsToDisplay = Object.keys(this.dataSource[0]);
+    this.columnsData = this.dataSource.map((x)=> { return {item: x.item, inventory: x.inventory}})
+    this.columnsToDisplay = Object.keys(this.columnsData[0]);
+    console.log('columnsData====>',this.columnsData);
+    console.log('dataSource====>',this.dataSource);
   }
 
 }

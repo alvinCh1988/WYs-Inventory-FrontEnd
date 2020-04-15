@@ -1,21 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
-import { FlatTreeControl } from '@angular/cdk/tree';
+import { Component, OnInit } from "@angular/core";
+import { FlatTreeControl } from "@angular/cdk/tree";
+import {
+  MatTreeFlatDataSource,
+  MatTreeFlattener,
+} from "@angular/material/tree";
 
 @Component({
-  selector: 'tree-nodes',
-  templateUrl: './tree-nodes.component.html',
-  styleUrls: ['./tree-nodes.component.scss']
+  selector: "tree-nodes",
+  templateUrl: "./tree-nodes.component.html",
+  styleUrls: ["./tree-nodes.component.scss"],
 })
 export class TreeNodesComponent implements OnInit {
-
-  constructor() {
-    this.dataSource.data = TREE_DATA;
-  }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
+  
   private _transformer = (node: FoodNode, level: number) => {
     return {
       expandable: !!node.children && node.children.length > 0,
@@ -32,13 +29,19 @@ export class TreeNodesComponent implements OnInit {
 
   dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
 
-  hasChild = (_: number, node: ExampleFlatNode) => node.expandable;
+  constructor() {
+    this.dataSource.data = TREE_DATA;
+  }
 
+  hasChild = (_: number, node: ExampleFlatNode) => node.expandable;
 }
 
 // ------------------------------------------------
 
-
+/**
+ * Food data with nested structure.
+ * Each node has a name and an optional list of children.
+ */
 interface FoodNode {
   name: string;
   children?: FoodNode[];
@@ -78,5 +81,3 @@ interface ExampleFlatNode {
   name: string;
   level: number;
 }
-
-
