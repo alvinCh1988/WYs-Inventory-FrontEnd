@@ -11,8 +11,8 @@ import {
   styleUrls: ["./tree-nodes.component.scss"],
 })
 export class TreeNodesComponent implements OnInit {
-  ngOnInit() {}
-  
+  ngOnInit() { }
+
   private _transformer = (node: FoodNode, level: number) => {
     return {
       expandable: !!node.children && node.children.length > 0,
@@ -22,10 +22,10 @@ export class TreeNodesComponent implements OnInit {
   }
 
   treeControl = new FlatTreeControl<ExampleFlatNode>(
-      node => node.level, node => node.expandable);
+    node => node.level, node => node.expandable);
 
   treeFlattener = new MatTreeFlattener(
-      this._transformer, node => node.level, node => node.expandable, node => node.children);
+    this._transformer, node => node.level, node => node.expandable, node => node.children);
 
   dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
 
@@ -34,6 +34,12 @@ export class TreeNodesComponent implements OnInit {
   }
 
   hasChild = (_: number, node: ExampleFlatNode) => node.expandable;
+
+
+  onClick(val) {
+
+    console.log('====>', val);
+  }
 }
 
 // ------------------------------------------------
@@ -47,31 +53,72 @@ interface FoodNode {
   children?: FoodNode[];
 }
 
-const TREE_DATA: FoodNode[] = [
+const TREE_DATA: any[] = [
   {
-    name: 'Fruit',
-    children: [
-      {name: 'Apple'},
-      {name: 'Banana'},
-      {name: 'Fruit loops'},
-    ]
-  }, {
-    name: 'Vegetables',
+    name: "發光肌",
     children: [
       {
-        name: 'Green',
+        name: "健康水噴霧",
         children: [
-          {name: 'Broccoli'},
-          {name: 'Brussels sprouts'},
-        ]
-      }, {
-        name: 'Orange',
-        children: [
-          {name: 'Pumpkins'},
-          {name: 'Carrots'},
-        ]
+          { name: "下公館" },
+          { name: "媽那邊" },
+        ],
       },
-    ]
+      {
+        name: "油水平衡露",
+        children: [
+          { name: "下公館" },
+          { name: "媽那邊" },
+        ],
+      },
+      {
+        name: "早安精華",
+        children: [
+          { name: "下公館" },
+          { name: "媽那邊" },
+        ],
+      },
+      {
+        name: "晚安精華",
+        children: [
+          { name: "下公館" },
+          { name: "媽那邊" },
+        ],
+      },
+    ],
+  },
+  {
+    name: "水潤光",
+    children: [
+      {
+        name: "保濕露",
+        children: [
+          { name: "下公館" },
+          { name: "媽那邊" },
+        ],
+      },
+      {
+        name: "保濕日精華",
+        children: [
+          { name: "下公館" },
+          { name: "媽那邊" },
+        ],
+      },
+      {
+        name: "保濕夜精華",
+        children: [
+          { name: "下公館" },
+          { name: "媽那邊" },
+        ],
+      },
+      {
+        name: "保濕水凝乳",
+        children: [
+          { name: "下公館" },
+          { name: "媽那邊" },
+        ],
+      },
+    ],
   },
 ];
 

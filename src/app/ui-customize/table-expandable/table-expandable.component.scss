@@ -1,5 +1,6 @@
 table {
     width: 100%;
+    font-family: Arial, Helvetica, sans-serif, '微軟正黑體';
   }
   
   tr.example-detail-row {
@@ -7,11 +8,11 @@ table {
   }
   
   tr.example-element-row:not(.example-expanded-row):hover {
-    background: whitesmoke;
+    background: rgb(225, 252, 253);
   }
   
   tr.example-element-row:not(.example-expanded-row):active {
-    background: #efefef;
+    background: rgb(207, 252, 255);
   }
   
   .example-element-row td {
@@ -19,30 +20,11 @@ table {
   }
   
   .example-element-detail {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     overflow: hidden;
-    // display: flex;
   }
+
+
   
-  // .example-element-diagram {
-  //   min-width: 80px;
-  //   border: 2px solid black;
-  //   padding: 8px;
-  //   font-weight: lighter;
-  //   margin: 8px 0;
-  //   height: 104px;
-  // }
-  
-  // .example-element-symbol {
-  //   font-weight: bold;
-  //   font-size: 40px;
-  //   line-height: normal;
-  // }
-  
-  // .example-element-description {
-  //   padding: 16px;
-  // }
-  
-  // .example-element-description-attribution {
-  //   opacity: 0.5;
-  // }
   

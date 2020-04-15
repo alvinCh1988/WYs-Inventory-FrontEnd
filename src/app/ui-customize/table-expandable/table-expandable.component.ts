@@ -18,18 +18,18 @@ export class TableExpandableComponent implements OnInit {
 
   @Input() dataSource;
 
+  expandedElement: null;
+
   public columnsToDisplay = [];
   public columnsName = ["項目", "庫存"];
-  public columnsData;
 
-  constructor() { 
+  constructor() {
   }
-  
+
   ngOnInit() {
-    this.columnsData = this.dataSource.map((x)=> { return {item: x.item, inventory: x.inventory}})
-    this.columnsToDisplay = Object.keys(this.columnsData[0]);
-    console.log('columnsData====>',this.columnsData);
-    console.log('dataSource====>',this.dataSource);
+    console.log('dataSource====>', this.dataSource);
+    this.columnsToDisplay = Object.keys(this.dataSource[0]).filter(x => x !== 'storageLoc');
+    console.log('columnsToDisplay====>', this.columnsToDisplay);
   }
 
 }

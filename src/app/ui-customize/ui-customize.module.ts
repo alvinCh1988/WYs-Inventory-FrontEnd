@@ -55,6 +55,7 @@ import { TableExpandableComponent } from "./table-expandable/table-expandable.co
 import { PanelExpansionBasicComponent } from "./panel-expansion-basic/panel-expansion-basic.component";
 import { TreeNodesComponent } from "./tree-nodes/tree-nodes.component";
 import { TreeDynamicComponent } from "./tree-dynamic/tree-dynamic.component";
+import { Card001Component } from './card001/card001.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { TreeDynamicComponent } from "./tree-dynamic/tree-dynamic.component";
     PanelExpansionBasicComponent,
     TreeNodesComponent,
     TreeDynamicComponent,
+    Card001Component,
   ],
   // 模組匯入區
   imports: [

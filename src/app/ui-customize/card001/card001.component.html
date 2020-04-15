@@ -1,0 +1,16 @@
+<mat-grid-list cols="4" rowHeight="145">
+    <ng-container *ngFor="let item of dataSource">
+        <mat-grid-tile>
+            <mat-card class="card-cus">
+                <mat-card-title>
+                    <strong>{{ item.loc }}</strong>
+                </mat-card-title>
+                <mat-card-subtitle>{{ item.update }}</mat-card-subtitle>
+                <mat-card-content>
+                    <h3>數量: {{ item.quantity }}</h3>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </ng-container>
+
+</mat-grid-list>
