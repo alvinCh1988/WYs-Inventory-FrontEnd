@@ -21,7 +21,7 @@ export class TableExpandableComponent implements OnInit {
   expandedElement: null;
 
   public columnsToDisplay = [];
-  public columnsName = ["項目", "庫存"];
+  public columnsName = ["項目", "庫存", "未分配"];
 
   constructor() {
   }

@@ -1,6 +1,12 @@
 table {
     width: 100%;
   }
+
+  th.mat-header-cell {
+    width: 350px;
+    font-size: large;
+    color: rgb(220, 0, 0);
+  }
   
   tr.example-detail-row {
     height: 0;

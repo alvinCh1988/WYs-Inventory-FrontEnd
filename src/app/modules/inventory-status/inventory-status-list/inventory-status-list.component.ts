@@ -23,6 +23,7 @@ const ELEMENT_DATA: Series[] = [
       {
         item: "健康水噴霧",
         inventory: 4,
+        unassigned: 0,
         storageLoc: [
           { loc: "下公館", quantity: 3, update: '2020/04/15' },
           { loc: "葉媽", quantity: 1, update: '2020/04/15' },
@@ -31,6 +32,7 @@ const ELEMENT_DATA: Series[] = [
       {
         item: "油水平衡露",
         inventory: 2,
+        unassigned: 0,
         storageLoc: [
           { loc: "下公館", quantity: 1, update: '2020/04/15' },
           { loc: "葉媽", quantity: 1, update: '2020/04/15' },
@@ -39,6 +41,7 @@ const ELEMENT_DATA: Series[] = [
       {
         item: "早安精華",
         inventory: 2,
+        unassigned: 0,
         storageLoc: [
           { loc: "下公館", quantity: 1, update: '2020/04/15' },
           { loc: "葉媽", quantity: 1, update: '2020/04/15' },
@@ -47,6 +50,7 @@ const ELEMENT_DATA: Series[] = [
       {
         item: "晚安精華",
         inventory: 2,
+        unassigned: 0,
         storageLoc: [
           { loc: "下公館", quantity: 1, update: '2020/04/15' },
           { loc: "葉媽", quantity: 1, update: '2020/04/15' },
@@ -60,6 +64,7 @@ const ELEMENT_DATA: Series[] = [
       {
         item: "保濕露",
         inventory: 2,
+        unassigned: 0,
         storageLoc: [
           { loc: "下公館", quantity: 1, update: '2020/04/15' },
           { loc: "葉媽", quantity: 1, update: '2020/04/15' },
@@ -68,6 +73,7 @@ const ELEMENT_DATA: Series[] = [
       {
         item: "保濕日精華",
         inventory: 2,
+        unassigned: 0,
         storageLoc: [
           { loc: "下公館", quantity: 1, update: '2020/04/15' },
           { loc: "葉媽", quantity: 1, update: '2020/04/15' },
@@ -76,6 +82,7 @@ const ELEMENT_DATA: Series[] = [
       {
         item: "保濕夜精華",
         inventory: 2,
+        unassigned: 0,
         storageLoc: [
           { loc: "下公館", quantity: 1, update: '2020/04/15' },
           { loc: "葉媽", quantity: 1, update: '2020/04/15' },
@@ -84,6 +91,7 @@ const ELEMENT_DATA: Series[] = [
       {
         item: "保濕水凝乳",
         inventory: 2,
+        unassigned: 0,
         storageLoc: [
           { loc: "下公館", quantity: 1, update: '2020/04/15' },
           { loc: "葉媽", quantity: 1, update: '2020/04/15' },

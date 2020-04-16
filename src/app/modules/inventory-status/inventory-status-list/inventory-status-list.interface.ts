@@ -6,6 +6,7 @@ export interface Series {
 export interface Inventory {
     item: string;
     inventory: number;
+    unassigned: number;
     storageLoc: Storage[];
 }
 
