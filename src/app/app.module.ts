@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { UiCustomizeModule } from './ui-customize/ui-customize.module';
@@ -11,6 +12,10 @@ import { InventoryDetailsListComponent } from './modules/inventory-details/inven
 import { InventoryDetailsFormComponent } from './modules/inventory-details/inventory-details-form/inventory-details-form.component';
 import { PurchaseListComponent } from './modules/purchase/purchase-list/purchase-list.component';
 import { PurchaseFormComponent } from './modules/purchase/purchase-form/purchase-form.component';
+import { DashboardComponent } from './layouts/dashboard/dashboard.component';
+import { AngularMaterialModule } from './angular-material.module';
+import { ExpandablePanelContentTableComponent } from './components/expandable-panel-content-table/expandable-panel-content-table.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,13 +26,21 @@ import { PurchaseFormComponent } from './modules/purchase/purchase-form/purchase
     InventoryDetailsFormComponent,
     PurchaseListComponent,
     PurchaseFormComponent,
+    DashboardComponent,
+    ExpandablePanelContentTableComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     UiCustomizeModule,
+    HttpClientModule,
+    AngularMaterialModule,
+
+  ],
+  exports: [
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class AppModule { }

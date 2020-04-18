@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Series } from './inventory-status-list.interface';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: "inventory-status-list",
@@ -7,16 +8,29 @@ import { Series } from './inventory-status-list.interface';
   styleUrls: ["./inventory-status-list.component.scss"],
 })
 export class InventoryStatusListComponent implements OnInit {
-  public dataSource = ELEMENT_DATA;
+  public dataSource;
   // public columnsName = ["項目", "單位", "庫存"];
 
-  constructor() { }
+  constructor(
+    private http: HttpClient,
+  ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+
+    this.http.get('http://localhost:8080/tree').subscribe((x) => {
+      
+    this.dataSource = x;
+  
+    });
+
+    
+
+   }
 }
 
 
-const ELEMENT_DATA: Series[] = [
+const ELEMENT_DATA: Series[] = 
+[
   {
     series: "發光肌",
     products: [

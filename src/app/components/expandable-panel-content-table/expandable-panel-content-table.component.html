@@ -1,0 +1,13 @@
+<mat-accordion>
+    <ng-container *ngFor="let item of dataSource">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <strong>{{ item.series }}</strong>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <table-expandable [dataSource]="item.products"></table-expandable>
+      </mat-expansion-panel>
+    </ng-container>
+  </mat-accordion>
+  
