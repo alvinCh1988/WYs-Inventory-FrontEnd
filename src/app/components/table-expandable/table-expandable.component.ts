@@ -27,6 +27,7 @@ export class TableExpandableComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log('TableExpandableComponent === >',this.dataSource)
     this.columnsToDisplay = Object.keys(this.dataSource[0]).filter(x => x !== 'storageLoc');
   }
 

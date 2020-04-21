@@ -10,7 +10,7 @@ export class DashboardComponent implements OnInit {
 
   mobileQuery: MediaQueryList;
 
-  fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
+  fillerNav = ['庫存清單','其他功能'];
 
   private _mobileQueryListener: () => void;
 

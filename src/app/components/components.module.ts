@@ -1,17 +1,18 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { AngularMaterialModule } from '../angular-material.module';
+// import { AngularMaterialModule } from '../angular-material.module';
+
 import { ExpandablePanelContentTableComponent } from './expandable-panel-content-table/expandable-panel-content-table.component';
-import { TableExpandableComponent } from './expandable-panel-content-table/table-expandable/table-expandable.component';
-import { Card001Component } from './expandable-panel-content-table/card001/card001.component';
+import { TableExpandableComponent } from './table-expandable/table-expandable.component';
+import { Card001Component } from './card001/card001.component';
 
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    AngularMaterialModule,
+    // AngularMaterialModule,
   ],
   declarations: [
     TableExpandableComponent,
@@ -19,7 +20,10 @@ import { Card001Component } from './expandable-panel-content-table/card001/card0
     ExpandablePanelContentTableComponent,
   ],
   exports: [
+    Card001Component,
+    TableExpandableComponent,
     ExpandablePanelContentTableComponent,
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class ComponentsModule { }

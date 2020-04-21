@@ -7,32 +7,32 @@ import { DashboardComponent } from './layouts/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
-    path: 'status-list',
-    component: InventoryStatusListComponent
-
-  },
-  {
     path: 'ui',
     component: UiTestComponent
   },
-  {
-    path: 'dash-board',
-    component: DashboardComponent
+ {
+    path: 'dashboard',
+    component: DashboardComponent,
+    children: [{
+      path: '',
+      loadChildren: () => import('./layouts/dashboard/dashboard.module').then(m => m.DashboardModule)
+      // loadChildren: './layouts/dashboard/dashboard.module#DashboardModule'
+    }]
   },
   {
     path: '',
-    redirectTo: 'status-list',
+    redirectTo: 'dashboard',
     pathMatch: 'full',
   },
   {
     path: '**',
-    redirectTo: 'status-list',
+    redirectTo: 'dashboard',
     pathMatch: 'full'
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: true })],
-  exports: [RouterModule]
+  exports: []
 })
 export class AppRoutingModule { }
