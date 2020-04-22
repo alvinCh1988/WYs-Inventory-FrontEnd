@@ -128,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "Yao-Inventory-System"
+  "defaultProject": "Yao-Inventory-System",
+  "cli": {
+    "analytics": false
+  }
 }

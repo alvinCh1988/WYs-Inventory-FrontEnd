@@ -8,18 +8,17 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { UiTestComponent } from './modules/ui-test/ui-test.component';
 import { InventoryStatusListComponent } from './modules/inventory-status/inventory-status-list/inventory-status-list.component';
-import { InventoryStatusFormComponent } from './modules/inventory-status/inventory-status-form/inventory-status-form.component';
 import { DashboardComponent } from './layouts/dashboard/dashboard.component';
 
 import { AngularMaterialModule } from './angular-material.module';
 import { ComponentsModule } from './components/components.module';
+import { ProductModule } from './modules/product/product.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     UiTestComponent,
     InventoryStatusListComponent,
-    InventoryStatusFormComponent,
     DashboardComponent,
 
   ],
@@ -31,6 +30,7 @@ import { ComponentsModule } from './components/components.module';
     AngularMaterialModule,
     RouterModule,
     ComponentsModule,
+    ProductModule,
   ],
   exports: [
   ],

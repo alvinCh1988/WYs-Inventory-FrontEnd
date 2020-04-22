@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { UiTestComponent } from './modules/ui-test/ui-test.component';
-import { InventoryStatusListComponent } from './modules/inventory-status/inventory-status-list/inventory-status-list.component';
 import { DashboardComponent } from './layouts/dashboard/dashboard.component';
 
 
@@ -10,13 +9,12 @@ const routes: Routes = [
     path: 'ui',
     component: UiTestComponent
   },
- {
+  {
     path: 'dashboard',
     component: DashboardComponent,
     children: [{
       path: '',
       loadChildren: () => import('./layouts/dashboard/dashboard.module').then(m => m.DashboardModule)
-      // loadChildren: './layouts/dashboard/dashboard.module#DashboardModule'
     }]
   },
   {

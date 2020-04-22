@@ -1,18 +1,18 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-// import { AngularMaterialModule } from '../angular-material.module';
 
 import { ExpandablePanelContentTableComponent } from './expandable-panel-content-table/expandable-panel-content-table.component';
 import { TableExpandableComponent } from './table-expandable/table-expandable.component';
 import { Card001Component } from './card001/card001.component';
+import { AngularMaterialModule } from '../angular-material.module';
 
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    // AngularMaterialModule,
+    AngularMaterialModule,
   ],
   declarations: [
     TableExpandableComponent,

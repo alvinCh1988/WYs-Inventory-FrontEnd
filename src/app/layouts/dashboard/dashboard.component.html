@@ -1,9 +1,9 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-  <mat-toolbar color="primary" class="example-toolbar">
+  <mat-toolbar color="accent" class="example-toolbar">
     <button mat-icon-button (click)="snav.toggle()">
       <mat-icon>{{ snav.opened ? 'close' : 'menu' }}</mat-icon>
     </button>
-    <h1 class="example-app-name">標題</h1>
+    <h1 class="example-app-name">小魚兒的庫存系統</h1>
   </mat-toolbar>
 
   <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
@@ -16,7 +16,10 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <router-outlet></router-outlet>
+      <div class="router-outlet-container">
+        <router-outlet></router-outlet>
+      </div>
+
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
