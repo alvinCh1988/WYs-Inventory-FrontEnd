@@ -6,6 +6,7 @@ import { ExpandablePanelContentTableComponent } from './expandable-panel-content
 import { TableExpandableComponent } from './table-expandable/table-expandable.component';
 import { Card001Component } from './card001/card001.component';
 import { AngularMaterialModule } from '../angular-material.module';
+import { Datepicker001Component } from './datepicker001/datepicker001.component';
 
 
 @NgModule({
@@ -18,11 +19,13 @@ import { AngularMaterialModule } from '../angular-material.module';
     TableExpandableComponent,
     Card001Component,
     ExpandablePanelContentTableComponent,
+    Datepicker001Component,
   ],
   exports: [
     Card001Component,
     TableExpandableComponent,
     ExpandablePanelContentTableComponent,
+    Datepicker001Component,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

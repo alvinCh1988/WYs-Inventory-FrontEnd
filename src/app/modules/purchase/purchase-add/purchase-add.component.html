@@ -1,0 +1,40 @@
+<!-- <div class="main-container">
+  <div class="button-row">
+    <button mat-raised-button (click)="add()">+</button>
+    <button mat-raised-button (click)="onSubmit()">送出</button>
+  </div>
+
+  <form class="cus-form">
+    <div class="card-container">
+      <ng-container *ngFor="let item of seriesDataList;let i = index">
+
+        <mat-card class="card">
+          <button mat-icon-button (click)="deleteIpt(i)">
+            <mat-icon>close</mat-icon>
+          </button>
+          <h2>{{ i+1 }}</h2>
+
+
+          <mat-form-field class="cus-full-width">
+            <mat-label>採購數量</mat-label>
+            <input type="number" matInput maxlength="5" [(ngModel)]="item.inventory"
+              [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+
+          <mat-form-field class="cus-full-width">
+            <mat-label>支出</mat-label>
+            <input type="number" matInput maxlength="5" [(ngModel)]="item.inventory"
+              [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+
+          <mat-form-field class="cus-full-width">
+            <mat-label>備註</mat-label>
+            <textarea matInput [(ngModel)]="item.inventory" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+
+        </mat-card>
+
+      </ng-container>
+    </div>
+  </form>
+</div> -->

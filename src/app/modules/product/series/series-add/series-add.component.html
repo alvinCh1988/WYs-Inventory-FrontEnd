@@ -3,12 +3,12 @@
         <button mat-raised-button (click)="add()">+</button>
         <button mat-raised-button (click)="onSubmit()">送出</button>
     </div>
-    <form class="example-form">
+    <form class="cus-form">
         <ng-container *ngFor="let item of seriesDataList;let i = index">
             <button mat-icon-button (click)="deleteIpt(i)">
                 <mat-icon>close</mat-icon>
             </button>
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="cus-full-width">
 
                 <mat-label>系列名稱</mat-label>
                 <input matInput [(ngModel)]="item.seriesName" [ngModelOptions]="{standalone: true}">

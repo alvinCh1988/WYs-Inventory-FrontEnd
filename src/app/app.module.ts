@@ -13,6 +13,8 @@ import { DashboardComponent } from './layouts/dashboard/dashboard.component';
 import { AngularMaterialModule } from './angular-material.module';
 import { ComponentsModule } from './components/components.module';
 import { ProductModule } from './modules/product/product.module';
+import { PurchaseAddComponent } from './modules/purchase/purchase-add/purchase-add.component';
+import { PurchaseViewTableComponent } from './modules/purchase/purchase-view-table/purchase-view-table.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { ProductModule } from './modules/product/product.module';
     UiTestComponent,
     InventoryStatusListComponent,
     DashboardComponent,
+    PurchaseAddComponent,
+    PurchaseViewTableComponent,
 
   ],
   imports: [

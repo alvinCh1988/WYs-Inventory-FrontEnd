@@ -7,12 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeriesAddComponent implements OnInit {
 
-  public seriesDataList = [
-    // { seriesName: '' },
-    // { seriesName: '' },
-    // { seriesName: '' },
-  ];
-
+  public seriesDataList = [];
 
   constructor() { }
 

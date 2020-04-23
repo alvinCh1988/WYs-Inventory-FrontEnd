@@ -1,0 +1,29 @@
+    .main-container {
+      width: 1400px;
+
+    }
+
+    .cus-form button {
+      float: right;
+    }
+
+    .cus-full-width {
+      width: 100%;
+    }
+
+    .button-row button {
+      margin-right: 8px;
+    }
+
+    .card-container {
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      margin-left: 1em;
+      margin-top: 2em;
+      width: 250px;
+    }
