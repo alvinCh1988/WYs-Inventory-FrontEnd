@@ -1,40 +1,35 @@
-<!-- <div class="main-container">
-  <div class="button-row">
-    <button mat-raised-button (click)="add()">+</button>
-    <button mat-raised-button (click)="onSubmit()">送出</button>
-  </div>
+<div class="main-container">
 
   <form class="cus-form">
-    <div class="card-container">
-      <ng-container *ngFor="let item of seriesDataList;let i = index">
-
-        <mat-card class="card">
-          <button mat-icon-button (click)="deleteIpt(i)">
-            <mat-icon>close</mat-icon>
-          </button>
-          <h2>{{ i+1 }}</h2>
-
-
-          <mat-form-field class="cus-full-width">
-            <mat-label>採購數量</mat-label>
-            <input type="number" matInput maxlength="5" [(ngModel)]="item.inventory"
-              [ngModelOptions]="{standalone: true}">
-          </mat-form-field>
-
-          <mat-form-field class="cus-full-width">
-            <mat-label>支出</mat-label>
-            <input type="number" matInput maxlength="5" [(ngModel)]="item.inventory"
-              [ngModelOptions]="{standalone: true}">
-          </mat-form-field>
-
-          <mat-form-field class="cus-full-width">
-            <mat-label>備註</mat-label>
-            <textarea matInput [(ngModel)]="item.inventory" [ngModelOptions]="{standalone: true}">
-          </mat-form-field>
-
-        </mat-card>
-
-      </ng-container>
+    <div>
+      <mat-form-field class="cus-mid-form">
+        <mat-label>採購日期</mat-label>
+        <input matInput [matDatepicker]="picker" [value]="date.value">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
     </div>
+    <div>
+      <mat-form-field class="cus-mid-form">
+        <mat-label>採購數量</mat-label>
+        <input type="number" matInput min=0 step=1 maxlength="5" [(ngModel)]="dataObject.num1"
+          [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="cus-mid-form">
+        <mat-label>支出</mat-label>
+        <input type="number" matInput min=0 step=1 maxlength="5" [(ngModel)]="dataObject.num2"
+          [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="cus-full-form">
+        <mat-label>備註</mat-label>
+        <textarea matInput [ngModelOptions]="{standalone: true}" [(ngModel)]="dataObject.remark"></textarea>
+      </mat-form-field>
+    </div>
+    <button mat-fab color="warn" (click)="onSubmit()">送出</button>
   </form>
-</div> -->
+
+</div>

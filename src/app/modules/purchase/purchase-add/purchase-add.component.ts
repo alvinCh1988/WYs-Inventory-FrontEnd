@@ -1,5 +1,10 @@
+import { format } from 'date-fns';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
+import { FormControl } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-purchase-add',
@@ -8,7 +13,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PurchaseAddComponent implements OnInit {
 
-  public seriesDataList = [];
+  public dataObject = {};
+
+  date = new FormControl(new Date());
 
   constructor(
     private http: HttpClient,
@@ -17,18 +24,14 @@ export class PurchaseAddComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  add() {
-    this.seriesDataList.push({});
-  }
 
-  deleteIpt(i: number) {
-    this.seriesDataList.splice(i, 1);
-  }
 
   onSubmit() {
-    this.http.post('http://localhost:8080/addInventoryType', this.seriesDataList).subscribe(res => {
-      console.log(res)
-    });
+    console.log(this.dataObject);
+    console.log('date===>', format(this.date.value, 'yyyy/mm/dd'));
+    // this.http.post('http://localhost:8080/addInventoryType', this.seriesDataList).subscribe(res => {
+    //   console.log(res)
+    // });
   }
 
 }

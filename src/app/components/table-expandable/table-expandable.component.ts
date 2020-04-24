@@ -21,14 +21,20 @@ export class TableExpandableComponent implements OnInit {
   expandedElement: null;
 
   public columnsToDisplay = [];
-  public columnsName = ["項目", "庫存", "未分配"];
+  public columnsName = ['項目', '庫存', '未分配', '管理'];
 
   constructor() {
   }
 
   ngOnInit() {
-    console.log('TableExpandableComponent === >',this.dataSource)
+    console.log('TableExpandableComponent === >', this.dataSource)
     this.columnsToDisplay = Object.keys(this.dataSource[0]).filter(x => x !== 'storageLoc');
+    this.columnsToDisplay.push('management');
+    console.log('columnsToDisplay === >', this.columnsToDisplay)
+  }
+
+  showDialog() {
+    console.log('test!!!!!!!!')
   }
 
 }

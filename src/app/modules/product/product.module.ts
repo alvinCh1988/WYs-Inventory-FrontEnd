@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { SeriesAddComponent } from './series/series-add/series-add.component';
 import { InventoryAddComponent } from './inventory/inventory-add/inventory-add.component';
 
-
 @NgModule({
   declarations: [
     SeriesAddComponent,

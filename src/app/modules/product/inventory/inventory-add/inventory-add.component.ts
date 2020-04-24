@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class InventoryAddComponent implements OnInit {
 
-  public seriesDataList = [];
+  public dataList = [];
 
   constructor(
     private http: HttpClient,
@@ -18,15 +18,15 @@ export class InventoryAddComponent implements OnInit {
   }
 
   add() {
-    this.seriesDataList.push({});
+    this.dataList.push({});
   }
 
   deleteIpt(i: number) {
-    this.seriesDataList.splice(i, 1);
+    this.dataList.splice(i, 1);
   }
 
   onSubmit() {
-    this.http.post('http://localhost:8080/addInventoryType', this.seriesDataList).subscribe(res => {
+    this.http.post('http://localhost:8080/addInventoryType', this.dataList).subscribe(res => {
       console.log(res)
     });
   }

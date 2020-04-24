@@ -13,8 +13,7 @@ import { DashboardComponent } from './layouts/dashboard/dashboard.component';
 import { AngularMaterialModule } from './angular-material.module';
 import { ComponentsModule } from './components/components.module';
 import { ProductModule } from './modules/product/product.module';
-import { PurchaseAddComponent } from './modules/purchase/purchase-add/purchase-add.component';
-import { PurchaseViewTableComponent } from './modules/purchase/purchase-view-table/purchase-view-table.component';
+import { PurchaseModule } from './modules/purchase/purchase.module';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,6 @@ import { PurchaseViewTableComponent } from './modules/purchase/purchase-view-tab
     UiTestComponent,
     InventoryStatusListComponent,
     DashboardComponent,
-    PurchaseAddComponent,
-    PurchaseViewTableComponent,
 
   ],
   imports: [
@@ -35,6 +32,7 @@ import { PurchaseViewTableComponent } from './modules/purchase/purchase-view-tab
     RouterModule,
     ComponentsModule,
     ProductModule,
+    PurchaseModule,
   ],
   exports: [
   ],

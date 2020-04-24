@@ -1,0 +1,29 @@
+.main-container {}
+
+.cus-form {
+  border: 1.8px solid rgb(250, 137, 171);
+  border-radius: 5px;
+  padding: 1em;
+  padding: 28px;
+  margin-top: 2em;
+  margin-left: 2em;
+  width: 500px;
+  // height: 300px;
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+}
+
+.cus-form button {
+  float: right;
+}
+
+.cus-full-form {
+  margin-top: 0.8em;
+  width: 100%;
+}
+
+.cus-mid-form {
+  margin-top: 0.8em;
+  width: 50%;
+}
